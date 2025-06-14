@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Mono&family=Quicksand:wght@300;400;500;600;700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=VT323&display=swap');
+
+* {
+  box-sizing: border-box;
+
+  font-family: "Nova Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+
+
+  transition: 0.3s;
+}
+
+:root {
+  --primary_color: #8670F7;
+  --secondary_color: #FF5869;
+  --edu_line_color: #515170;
+  --text_color: #AFA8ED;
+}
+
+p{ 
+  color: white;
+  font-size: 24px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  color: white;
+}
+
+h2{
+  font-size: 32px;
+}
+
+h1{
+  font-size: 64px;
+}
+
+li{
+  color: white;
+}
+
+.app {
+  background-color: #191921;
+  padding: 2rem 2rem 2rem 4rem;
+}
+
+button {
+  min-width: 330px;
+  padding: 1rem;
+  font-size: 24px;
+  border-radius: 23px;
+
+  border: none;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.column {
+  width: 50%;
+  display: inline-block;
+}
+

@@ -1,0 +1,298 @@
+.main {
+    padding-top: 150px;
+    height: 80vh;
+    width: 100%;
+
+    h1 {
+        font-weight: normal;
+        margin-bottom: 1rem;
+    }
+
+    p{
+        margin-top: 0rem;
+        color: var(--text_color);
+    }
+
+    .row {
+        width: 200px;
+        margin-top: 5rem;
+
+        button{
+            box-sizing: border-box;
+            margin-right: 4rem;
+
+            border: solid #8670f700 3px;
+        
+            &:nth-child(1) {
+                background-color: var(--primary_color);
+
+                &:hover {
+                    background: none;
+                    border: var(--primary_color) solid 3px;
+
+                    color: var(--primary_color);
+                }
+
+            }
+
+            &:nth-child(2) {
+                background: none;
+                border: #FF5869 solid 3px;
+                color: #FF5869;
+                
+                &:hover {
+                    background-color: #FF5869;
+                    border: solid #8670f700 3px;
+
+                    color: white;
+                }
+            }
+
+        }
+    }
+}
+
+.info_block {
+    margin-top: 1rem;
+    
+    .row {
+        width: 100%;
+        display: block;
+
+        h2{
+            display: inline-block;
+            width: 50%;
+            padding: 0 6rem;
+
+            text-align: right;
+
+            &:nth-child(2){
+                text-align: left;
+                border-left: white solid 3px;
+            }
+        }
+    }
+
+    .info {
+        margin-top: 5rem;
+        display: flex;
+
+        .column {
+            height: 80vh;
+
+            ul{
+                margin: 0;
+                font-size: 24px;
+            }
+            
+
+            &:nth-child(2) {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                
+                button {
+                    margin-top: 1rem;
+                    width: 330px;
+                    
+                    background-image: linear-gradient(to right, var(--primary_color), var(--secondary_color));
+                    color: white;
+                }
+            }
+        }
+
+
+    }
+
+    .education_block {
+
+        display: flex;
+        flex-direction: row;
+
+        .column_line {
+            position: relative;
+
+            min-height: max-content;
+
+            width: 3px;
+            background-color: var(--edu_line_color);
+            border-radius: 20px;
+
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            &::after {
+                content: "";
+                position: absolute;
+                left: -4px;
+                transform: translateY(-50%);
+                width: 10px;
+                height: 10px;
+                background-color: var(--edu_line_color);
+                border-radius: 50%;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: -6px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 0;
+                height: 0;
+                border-left: 6px solid transparent;
+                border-right: 6px solid transparent;
+                border-top: 8px solid var(--edu_line_color);
+            }
+          
+        }
+
+        .column {
+            height: 80vh;
+            width: calc(50% - 3px);
+
+            display: inline-flex;
+            flex-direction: column;
+            
+            transition: 0.3s;
+
+            &:nth-child(1) {
+                margin-top: 0rem;
+
+                justify-content: space-evenly;
+             
+                p {
+                    margin-right: 10rem;
+                }
+            }
+
+            &:nth-child(3) {
+                justify-content: center;
+            
+                p, h2 {
+                    margin-left: 10rem;
+                }
+
+                .edu_block {
+                    .edu_block_title {
+                       flex-direction: row-reverse;                       
+                        
+                       h2{
+                        width: 100%;
+                        text-align: left;
+                        margin: 1rem;
+                       }
+
+                       .story_line {
+                        width: 12rem;
+                       }
+
+                       .story_line::after{
+                        left: auto;
+                        right: 0;
+                       }
+                    }
+                }
+            }
+
+
+            .edu_block {
+                display: block;
+
+                .edu_block_title {
+                    width: 100%;
+
+                    display: flex;
+                    flex-direction: row;
+
+                    h2 {
+                        color: var(--text_color);
+
+                        width: 50%;
+                        font-size: 22px;
+                    }
+
+                    .story_line {
+                        position: relative;
+     
+                        align-self: center;
+
+                        width: 50%;
+                        height: 3px;
+                        background-color: var(--edu_line_color);
+
+                        border-radius: 20px;
+
+                        display: inline-block;
+
+                         &::after {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            width: 10px;
+                            height: 10px;
+                            background-color: var(--edu_line_color);
+                            border-radius: 50%;
+                        }
+                    }
+                   
+                }
+            }
+
+            p {
+                font-size: 16px;
+                display: block;
+            }
+        }
+    }
+}   
+
+
+// animation slider here
+.tab-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  min-height: 80vh;
+}
+
+.tab-content {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.tab-content.active {
+  opacity: 1;
+  transform: translateX(0%);
+  z-index: 2;
+  pointer-events: auto;
+}
+
+.tab-content.slide-left {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.tab-content.slide-right {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.tab-button {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.tab-button.active {
+  opacity: 1;
+  text-decoration: underline;
+}

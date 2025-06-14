@@ -1,0 +1,27 @@
+.header {
+    margin: 0;
+    padding: 2rem 0rem 2rem 0rem;
+
+    display: flex;
+    justify-content: space-between;
+
+    text-align: center;
+
+    h2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+    }
+
+    ul {
+        list-style-type: none;
+
+        li{
+            display: inline-block;
+            margin-right: 2rem;
+
+            font-size: 24px;
+        }
+    }
+}

@@ -29,7 +29,7 @@ export default function Projects_page() {
 
                 This project explores the fundamentals of network communication, data integrity, and connection reliability — combining academic theory with real implementation.
                 </>}
-                media_path="./assets/pks_conf.gif"
+                media_path="../portfolio/assets/pks_conf.gif"
                 github_link="https://github.com/ymarochok/pks-ffp"/>
 
 
@@ -58,7 +58,7 @@ export default function Projects_page() {
                 Goal:
                 A cyber-minimal environment — sharp, responsive, and distraction-free — optimized for coding, design, and daily use.
                </>}
-               media_path="./assets/arch_conf.gif"
+               media_path="../portfolio/assets/arch_conf.gif"
                github_link="https://github.com/ymarochok/cyber_conf_arch_rice"            />
 
         

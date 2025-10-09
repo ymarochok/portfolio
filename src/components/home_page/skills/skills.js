@@ -165,7 +165,7 @@ export default function Skills({ rowsCount = 4 }) {
                     {skill.title === "FastAPI" ? (
                         <>
                             <img 
-                            src="/FastAPI.svg" 
+                            src="./assets/FastAPI.svg" 
                             alt="FastAPI" 
                             style={{ width: "30px", height: "30px"}} 
                             />
@@ -174,7 +174,7 @@ export default function Skills({ rowsCount = 4 }) {
                         ) : skill.title == "C/C++" ? (
                         <>
                             <img 
-                                src="/c.svg" 
+                                src="./assets/c.svg" 
                                 alt="C Language" 
                                 style={{ width: "30px", height: "30px"}} 
                                 />

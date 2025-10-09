@@ -39,3 +39,39 @@
         }
     }
 }
+
+
+
+@media (max-width: 660px) {
+ .header{
+    // height: 100vh;
+        ul{
+            display: flex;
+            flex-direction: column;
+            li{
+                margin-top: 1rem;
+                display: box;
+                color: red;
+            }
+        }
+
+    }   
+}
+
+
+@media (max-width: 425px) {
+    .header {
+        flex-direction: column;
+
+        h2{
+            border-bottom: 2px solid white;
+        }
+
+        ul{
+            justify-content: center;
+            align-items: center;
+            padding: 0rem;
+            margin: 0rem;
+        }
+    }
+}

@@ -9,7 +9,7 @@ export default function Header(){
            
             <ul>
                 {/* <Router> */}
-                    <li><Link to="/portfolio">Home</Link></li>
+                    <li><Link to="/portfolio/">Home</Link></li>
                     <li><Link to="/projects">My Projects</Link></li>
                     <li><HashLink to="/portfolio#about">About me</HashLink></li>
                 {/* </Router> */}

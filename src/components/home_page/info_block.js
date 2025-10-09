@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Skills from "./skills/skills";
 
 export default function Info_block() {
     const [activeTab, setActiveTab] = useState("info");
@@ -13,7 +14,7 @@ export default function Info_block() {
     };
 
     return (
-        <div className="info_block">
+        <div className="info_block" id="about">
             <div className="row">
                 <h2
                     className={`tab-button ${activeTab === "info" ? "active" : ""}`}
@@ -41,17 +42,17 @@ export default function Info_block() {
                         <div className="column">
                             <h2>My name is Yaroslav Marochok</h2>
                             <p>
-                                Second-year Computer Science student at the Slovak University of Technology (FIIT) with a strong interest in Python back-end development, ReactJS front-end development and game design. Interested in building efficient software and configuring Linux-based systems (Arch Linux, Fedora Linux). Quick to learn new technologies and comfortable working both independently and in team.
+                                Third-year Computer Science student at the Slovak University of Technology (FIIT) with a strong interest in Python back-end development, ReactJS front-end development and game design. Interested in building efficient software and configuring Linux-based systems (Arch Linux, Fedora Linux). Quick to learn new technologies and comfortable working both independently and in team.
                             </p>
-                            <ul>
+                            {/* <ul>
                                 <li>Slovak B2</li>
                                 <li>English B2</li>
                                 <li>Ukrainian (native)</li>
-                            </ul>
+                            </ul> */}
                         </div>
                         <div className="column">
-                            <button>SKILLS</button>
-                            <div className="skills_table"></div>
+                            {/* <button>SKILLS</button> */}
+                            <Skills/>
                         </div>
                     </div>
                 </div>
@@ -69,15 +70,22 @@ export default function Info_block() {
                                 <p>In Ukraine, I have studied in this school from October 2021 to June 2022 on course of Web-Development, where received knowledge on usage basics of web-development and more detailed ReactJS.</p>
                             </div>
                             <div className="edu_block">
-                                <div className="edu_block_title"><h2>IT Step Academy (2021 - 2022)</h2><div className="story_line"></div></div>
-                                <p>In Ukraine, I have studied in this school from October 2021 to June 2022 on course of Web-Development, where received knowledge on usage basics of web-development and more detailed ReactJS.</p>
+                                <div className="edu_block_title"><h2>Faculty of Informatics and Information Technologies (2023 - now)</h2><div className="story_line"></div></div>
+                                <p>
+                                    Studied at the Faculty of Informatics and Information Technologies (FIIT), STU in Bratislava. FIIT is a top-ranked Central European faculty for Informatics, renowned for its IET-accredited programs and graduates who are the most in-demand in 
+                                    the local IT market. Focused my studies on Software Engineering, AI, and Information Security.
+                                </p>
+                            
                             </div>
                         </div>
                         <div className="column_line"></div>
                         <div className="column">
                             <div className="edu_block">
-                                <div className="edu_block_title"><h2>IT Step Academy (2021 - 2022)</h2><div className="story_line"></div></div>
-                                <p>In Ukraine, I have studied in this school from October 2021 to June 2022 on course of Web-Development, where received knowledge on usage basics of web-development and more detailed ReactJS.</p>
+                                <div className="edu_block_title"><h2>Albert Einstean Grammar School (2022-2023)</h2><div className="story_line"></div></div>
+                                <p>
+                                    After moving to Slovakia, this school offered an opportunity for many people without prior knowledge of the Slovak language to enroll, study, 
+                                    and graduate. I successfully graduated in the subjects of Slovak, Mathematics, Physics, and English.
+                                </p>
                             </div>
                         </div>
                     </div>

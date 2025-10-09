@@ -1,0 +1,57 @@
+.projects_page {
+    min-height: 60vh;
+
+    h2 {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        width: 100%;
+        text-align: center;
+        font-size: 24px;
+
+        color: #8181CA;
+
+        padding: 1rem;
+
+        border-bottom: 3px solid #8181CA;
+    }
+
+    .project_item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+        
+        gap: 2rem;
+
+        div{
+            padding-right: 1.5rem;
+            color: white;
+            display: flex;
+            flex-direction: column;
+
+            p{
+                font-size: 24px;
+            }
+
+
+            line-height: 2rem;
+            font-size: 16px;
+        
+            a {
+                color: #8181CA;
+            }
+        }
+
+        img {
+            width: 530px;
+            height: 300px;
+            border-radius: 15px;
+        }
+
+
+        &:nth-child(odd){
+            flex-direction: row-reverse;
+        }
+    }
+}
+

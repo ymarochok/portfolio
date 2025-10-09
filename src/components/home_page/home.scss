@@ -54,6 +54,7 @@
 
 .info_block {
     margin-top: 1rem;
+    // height: 00px;
     
     .row {
         width: 100%;
@@ -78,11 +79,11 @@
         display: flex;
 
         .column {
-            height: 80vh;
+            min-height: 80vh;
 
             ul{
                 margin: 0;
-                font-size: 24px;
+                font-size: 20px;
             }
             
 
@@ -147,7 +148,7 @@
         }
 
         .column {
-            height: 80vh;
+            min-height: 80vh;
             width: calc(50% - 3px);
 
             display: inline-flex;
@@ -254,7 +255,7 @@
   position: relative;
   width: 100%;
   overflow: hidden;
-  min-height: 80vh;
+  min-height: 600px;
 }
 
 .tab-content {

@@ -129,7 +129,7 @@ export default function Skills({ rowsCount = 4 }) {
   const [disabledIndex, setDisabledIndex] = useState(null);
   
   return (
-    <div className="skills">
+    <div className="skills" id="skills">
 
       <div className="rotation_container">
         <div className="circle-container">
@@ -165,7 +165,7 @@ export default function Skills({ rowsCount = 4 }) {
                     {skill.title === "FastAPI" ? (
                         <>
                             <img 
-                            src="./assets/FastAPI.svg" 
+                            src="https://ymarochok.github.io/portfolio/assets/FastAPI.svg" 
                             alt="FastAPI" 
                             style={{ width: "30px", height: "30px"}} 
                             />
@@ -174,7 +174,7 @@ export default function Skills({ rowsCount = 4 }) {
                         ) : skill.title == "C/C++" ? (
                         <>
                             <img 
-                                src="./assets/c.svg" 
+                                src="https://ymarochok.github.io/portfolio/assets/c.svg" 
                                 alt="C Language" 
                                 style={{ width: "30px", height: "30px"}} 
                                 />

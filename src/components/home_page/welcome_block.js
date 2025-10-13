@@ -4,7 +4,7 @@ export default function Welcome_block(){
     let navigate = useNavigate();
 
     return(
-        <div className="main">
+        <div className="main" id="main">
             <div>
             <h1>Welcome!</h1>
             <p>Welcome to my portfolio web-page. My name is Yaroslav Marochok.</p>

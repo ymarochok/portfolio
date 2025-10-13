@@ -11,6 +11,16 @@
   transition: 0.3s;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  /* overflow: hidden; hides background edges */
+  background:  #191921; /* your preferred color */
+  height: 100%;
+  width: 100%;
+}
+
 :root {
   --primary_color: #8670F7;
   --secondary_color: #FF5869;

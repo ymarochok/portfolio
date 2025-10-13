@@ -75,3 +75,68 @@
 
 
 }
+
+@media (max-width: 1040px) {
+    .footer {
+        .column:nth-child(2) p{
+            font-size: 14px;
+            text-align: center;
+            // background-color: red;
+            margin-left: 1rem;
+        }
+    }
+}
+
+
+
+@media (max-width: 840px){
+    .footer {
+        flex-direction: column;
+        height: max-content;
+        text-align: center;
+        align-items: center;
+        gap: 2rem;
+        
+
+        .contact_me {
+            text-align: center;
+
+            .row-socials{
+                width: 80%;
+                margin: auto;
+                justify-content: space-evenly;
+                gap: 0;
+            }
+
+            p{
+                width: 100%;
+            }
+        }
+
+        .column {
+            width: 100%;
+            text-align: center;
+            
+            &:nth-child(2){
+                display: none;
+            }
+
+            &:nth-child(3) {
+                padding: 0;
+
+                button{
+                    border-radius: 0px;
+                    // border: none;
+                    max-width: 100%;
+                    // margin: auto;
+                }
+            }
+        }
+
+
+        *{
+            box-sizing: border-box;
+            width: max-content;
+        }
+    }
+}

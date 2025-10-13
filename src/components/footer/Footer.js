@@ -65,7 +65,7 @@ export default function Footer() {
             </div>
             
             <div className='column dw_cv_btn_div'>
-                <a  href="cv.pdf" download="cv.pdf"><button>Download resume</button></a>
+                <a  href="./assets/cv.pdf" download="./assets/cv.pdf"><button>Download CV</button></a>
             </div>
 
         </div>

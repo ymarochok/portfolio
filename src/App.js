@@ -22,7 +22,7 @@ function CursorEffect() {
     function handleMove(e) {
       const { innerWidth, innerHeight } = window;
       const moveX = (e.clientX - innerWidth / 2) / innerWidth * 10;
-      const moveY = (e.clientY - innerHeight / 2) / innerHeight * 20;
+      const moveY = (e.clientY - innerHeight / 2) / innerHeight * 10;
 
       for (const el of elements) {
         el.style.transform = `translate(${moveX}px, ${moveY}px)`;

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Skills from "./skills/skills";
+import SlideInBlock from "../utils/SlideInBlock";
 
 export default function Info_block() {
     const [activeTab, setActiveTab] = useState("info");
@@ -12,6 +13,8 @@ export default function Info_block() {
         setPrevTab(activeTab);
         setActiveTab(tab);
     };
+
+    
 
     return (
         <div className="info_block" id="about">
@@ -40,6 +43,7 @@ export default function Info_block() {
                     {/* ...info content... */}
                     <div className="info">
                         <div className="column">
+                            <SlideInBlock>
                             <h2>My name is Yaroslav Marochok</h2>
                             <p>
                                 Third-year Computer Science student at the Slovak University of Technology (FIIT) with a strong interest in Python back-end development, ReactJS front-end development and game design. Interested in building efficient software and configuring Linux-based systems (Arch Linux, Fedora Linux). Quick to learn new technologies and comfortable working both independently and in team.
@@ -49,6 +53,7 @@ export default function Info_block() {
                                 <li>English B2</li>
                                 <li>Ukrainian (native)</li>
                             </ul> */}
+                            </SlideInBlock>
                         </div>
                         <div className="column">
                             {/* <button>SKILLS</button> */}

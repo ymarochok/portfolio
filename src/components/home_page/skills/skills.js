@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDatabase } from '@fortawesome/free-solid-svg-icons';
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 import './skills.scss';
 
@@ -88,21 +88,49 @@ const allSkills = [
 
 
 // Helper function: split flat array into pyramid rows of sizes: rows, rows-1, ..., 1
-function splitSkillsIntoRows(skills, rowsCount) {
-  const rows = [];
-  let startIndex = 0;
+// function splitSkillsIntoRows(skills, rowsCount) {
+//   const rows = [];
+//   let startIndex = 0;
 
-  for (let i = 0; i < rowsCount; i++) {
-    const rowSize = rowsCount - i + 1; // decreasing row size
-    const rowSkills = skills.slice(startIndex, startIndex + rowSize);
-    rows.push(rowSkills);
-    startIndex += rowSize;
-  }
-  return rows;
+//   for (let i = 0; i < rowsCount; i++) {
+//     const rowSize = rowsCount - i + 1; // decreasing row size
+//     const rowSkills = skills.slice(startIndex, startIndex + rowSize);
+//     rows.push(rowSkills);
+//     startIndex += rowSize;
+//   }
+//   return rows;
+// }
+
+let angleStep = 360 / allSkills.length;
+let radius = 200;
+let rotation_axis = 360;
+let back_rot = false;
+
+function changeRadius(new_rad) {
+  radius = new_rad
 }
 
-const angleStep = 360 / allSkills.length;
-const radius = 180;
+function startAngleStepRotation(callback, isPausedRef) {
+  const interval = setInterval(() => {
+    if (!isPausedRef.current) {
+      rotation_axis += back_rot ? 360 : -360;
+      angleStep = rotation_axis / allSkills.length;
+      // radius += back_rot ? 20 : -20
+
+      if (angleStep % 360 == 0){
+        back_rot = !back_rot
+        rotation_axis += back_rot ? 720 : -720;
+        angleStep = rotation_axis / allSkills.length;
+      } 
+      
+      console.log("Angle step is " + angleStep + " rotation axis is " + rotation_axis + " back_rot is " + back_rot)
+
+      if (callback) callback(angleStep);
+    } 
+  }, 2000);
+
+  return () => clearInterval(interval);
+}
 
 function normalizeAngle(angle) {
   let trans_direction = 1;
@@ -123,20 +151,34 @@ function normalizeAngle(angle) {
   return [angle, trans_direction]
 }
 
-
 export default function Skills({ rowsCount = 4 }) {
-  const rows = splitSkillsIntoRows(allSkills, rowsCount);
   const [disabledIndex, setDisabledIndex] = useState(null);
+  const [angle_temp, setAngle] = useState(angleStep);
+  const [rotation_paused, setPauseRotation] = useState(false);
+  const isPausedRef = useRef(rotation_paused);
+
+  useEffect(() => {
+    isPausedRef.current = rotation_paused;
+  }, [rotation_paused]);
+
+  useEffect(() => {
+    const stop = startAngleStepRotation(setAngle, isPausedRef);
+    return stop; // cleanup on unmount
+  }, []);
+
   
+
   return (
-    <div className="skills" id="skills">
+    <div className="skills" id="skills" 
+        onMouseEnter={() => {changeRadius(250); setPauseRotation(true)}} 
+        onMouseLeave={() => {changeRadius(200); setPauseRotation(false)}}>
 
       <div className="rotation_container">
         <div className="circle-container">
           {
           allSkills.map((skill, idx) => {
 
-                  const [angle, trans_direction] = normalizeAngle(idx * angleStep);
+                  const [angle, trans_direction] = normalizeAngle(idx * angle_temp);
 
                   const isDisabled = disabledIndex === idx;
 

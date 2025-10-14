@@ -102,7 +102,9 @@ const allSkills = [
 // }
 
 let angleStep = 360 / allSkills.length;
-let radius = 200;
+let radius = 180;
+const radius_na = radius;
+const radius_act = 200;
 let rotation_axis = 360;
 let back_rot = false;
 
@@ -170,8 +172,8 @@ export default function Skills({ rowsCount = 4 }) {
 
   return (
     <div className="skills" id="skills" 
-        onMouseEnter={() => {changeRadius(250); setPauseRotation(true)}} 
-        onMouseLeave={() => {changeRadius(200); setPauseRotation(false)}}>
+        onMouseEnter={() => {changeRadius(radius_act); setPauseRotation(true)}} 
+        onMouseLeave={() => {changeRadius(radius_na); setPauseRotation(false)}}>
 
       <div className="rotation_container">
         <div className="circle-container">

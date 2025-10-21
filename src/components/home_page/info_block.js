@@ -13,7 +13,11 @@ export default function Info_block() {
         setPrevTab(activeTab);
         setActiveTab(tab);
     };
+    // const [isExpanded, setIsExpanded] = useState(false);
 
+    // const toggleExpand = () => {
+    //     setIsExpanded(!isExpanded);
+    // };
     
 
     return (
@@ -73,6 +77,9 @@ export default function Info_block() {
                             <div className="edu_block">
                                 <div className="edu_block_title"><h2>IT Step Academy (2021 - 2022)</h2><div className="story_line"></div></div>
                                 <p>In Ukraine, I have studied in this school from October 2021 to June 2022 on course of Web-Development, where received knowledge on usage basics of web-development and more detailed ReactJS.</p>
+                                {/* <button className="readmore" onClick={toggleExpand}>
+                                            {isExpanded ? 'read less' : 'read more'}
+                                        </button>                             */}
                             </div>
                             <div className="edu_block">
                                 <div className="edu_block_title"><h2>Faculty of Informatics and Information Technologies (2023 - now)</h2><div className="story_line"></div></div>
@@ -80,6 +87,7 @@ export default function Info_block() {
                                     Studied at the Faculty of Informatics and Information Technologies (FIIT), STU in Bratislava. FIIT is a top-ranked Central European faculty for Informatics, renowned for its IET-accredited programs and graduates who are the most in-demand in 
                                     the local IT market. Focused my studies on Software Engineering, AI, and Information Security.
                                 </p>
+                                {/* <button className="readmore">read more</button> */}
                             
                             </div>
                         </div>
@@ -91,6 +99,7 @@ export default function Info_block() {
                                     After moving to Slovakia, this school offered an opportunity for many people without prior knowledge of the Slovak language to enroll, study, 
                                     and graduate. I successfully graduated in the subjects of Slovak, Mathematics, Physics, and English.
                                 </p>
+                                {/* <button className="readmore">read more</button> */}
                             </div>
                         </div>
                     </div>

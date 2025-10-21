@@ -14,7 +14,7 @@ export default function SlideInBlock({ children, className = "" }) {
           }
         });
       },
-      { threshold: 0.2 }
+      { threshold: 0.1 }
     );
 
     const el = ref.current;

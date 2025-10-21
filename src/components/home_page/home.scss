@@ -38,6 +38,7 @@
         
             &:nth-child(1) {
                 background-color: var(--primary_color);
+                color: none;
 
                 &:hover {
                     background: none;
@@ -350,7 +351,7 @@
         }        
 
         .tab-container {
-            min-height: 700px;
+            min-height: 760px;
         }
 }
 

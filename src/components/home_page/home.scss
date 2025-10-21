@@ -8,7 +8,6 @@
 
     a{
         text-decoration: none;
-
     }
 
     h1 {
@@ -20,6 +19,8 @@
     p{
         margin-top: 0rem;
         color: var(--text_color);
+        // color: red;
+
     }
 
     .row {
@@ -38,7 +39,7 @@
         
             &:nth-child(1) {
                 background-color: var(--primary_color);
-                color: none;
+                color: #191921;
 
                 &:hover {
                     background: none;

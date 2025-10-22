@@ -7,6 +7,47 @@ export default function Projects_page() {
         <div className="projects_page">
             <h2>My Projects</h2>
 
+            <Project_item title="System Monitor Application | Not finished yet"
+            
+            content={<>
+            Developed a robust client-server system for real-time monitoring and logging of system metrics across connected devices.
+
+            <ul>
+
+                <li>Real-time system monitoring: Tracks metrics from all connected devices continuously, providing accurate and timely data.</li>
+                <li>Secure communication: Custom key exchange mechanism ensures safe transmission between clients and server.</li>
+                <li>Device fingerprinting: Recognizes returning devices automatically, eliminating the need for repeated registration.</li>
+                <li>Robust backend architecture: FastAPI + PostgreSQL setup for managing users, devices, and logs efficiently.</li>
+                <li>Scalable and practical: Designed to handle multiple devices reliably, making it production-ready.</li>
+            </ul>
+
+            </>}
+            
+            media_path="../portfolio/assets/vigilious.gif"
+            github_link="#"/>
+
+
+            <Project_item title="NotesDB – Full-Stack Notes Management Application" 
+            content={<>
+                NotesDB is a full-stack web application for creating, editing, and organizing user notes with secure authentication and persistent storage. The project focuses on clean architecture, modular design, and containerized deployment.
+
+            Highlights:
+
+            <ul>
+                <li>Developed a RESTful API with FastAPI, connected to a PostgreSQL database for reliable data persistence.</li>
+
+                <li>Implemented JWT-based authentication and authorization to ensure secure user access.</li>
+
+                <li>Built a dynamic ReactJS frontend that communicates with the backend through REST endpoints.</li>
+                
+                <li>Deployed the system using Docker Compose, isolating backend and database services in separate containers for easy scalability and portability.</li>
+            </ul>
+
+            </>}
+            
+            media_path="../portfolio/assets/notesdb.gif" 
+            github_link="https://github.com/ymarochok/notesdb/tree/db_docker_based_system"/>
+
 
             <Project_item title="Python text and file excahnger in console web-sockets based"
                 content={<>
